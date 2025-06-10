@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.g.guicursor = ""          -- depois $`reset` no terminal para assumir o cursor fininho : < IBeam > configurado no terminal.
+
+vim.g.mapleader = " "         -- Define a tecla 'leader' (geralmente configurado em um local anterior, como init.lua do LazyVim)

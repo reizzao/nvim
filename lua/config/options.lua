@@ -70,14 +70,15 @@ vim.cmd([[
   nnoremap <C-u> viwU<Esc> " pra minuscula em normal
 ]])
 
+
 -- SUBSTITUIÇÃO TODAS OCORRENCIAS DIGITADAS
 -- para usar execute o atalho -> volte uma barra com a seta e digite A PROCURA -> após a proxima barra digite o que  vai substituir a procura encontrada
 vim.cmd([[
-  nnoremap <A-s> :%s///g<Left><Left>
-  nnoremap <A-sc> :%s///gc<Left><Left><Left>
+  nnoremap <leader>ss :%s///g<Left><Left>
+  nnoremap <leader>ssc :%s///gc<Left><Left><Left>
 
-  xnoremap <A-s> :s///g<Left><Left>
-  xnoremap <A-sc> :s///gc<Left><Left><Left>
+  xnoremap <leader>ss :s///g<Left><Left>
+  xnoremap <leader>ssc :s///gc<Left><Left><Left>
 
   vnoremap * y/\V<C-R>=escape(@",'/\')<CR><CR>
 

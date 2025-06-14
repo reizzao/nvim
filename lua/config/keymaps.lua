@@ -56,7 +56,7 @@ set_keymap({ "n", "v" }, "<leader>y", "y", "Copiar seleção/linha")
 -- Atalho: <leader>p (Space + p)
 set_keymap("n", "<leader>p", "p", "Colar após o cursor/seleção")
 -- Em inserção, <C-r>" cola o conteúdo do registro padrão.
-set_keymap("i", "<leader>p", "<C-r>\"", "Colar no modo de inserção")
+set_keymap("i", "<leader>p", '<C-r>"', "Colar no modo de inserção")
 
 -- Ação: Copiar e já colar (duplicar linha)
 -- Atalho: <leader>dd (Space + d + d) - Duplica a linha atual
@@ -141,3 +141,40 @@ set_keymap("i", "<S-Down>", "<C-o>}", "Pular parágrafo/bloco para baixo (modo i
 set_keymap("n", "<C-a>", "ggVG", "Selecionar tudo")
 set_keymap("v", "<C-a>", "ggVG", "Selecionar tudo") -- No modo visual, expande a seleção
 set_keymap("i", "<C-a>", "<C-o>ggVG", "Selecionar tudo (modo inserção)")
+
+-- FUNCOES -----------
+-- lua/my_keymaps.lua (ou diretamente em init.lua)
+
+-- Função para realizar a busca em todo o projeto com Telescope
+local function project_grep_prompt()
+  -- Se você quiser preencher o termo de busca com a palavra sob o cursor:
+  local word = vim.fn.expand("<cword>")
+  if word ~= "" then
+    require("telescope.builtin").live_grep({
+      default_text = word,
+    })
+  else
+    require("telescope.builtin").live_grep()
+  end
+end
+
+-- Mapeia Ctrl+F para a função project_grep_prompt
+-- 'nmap' para modo normal, 'vmap' para modo visual (para selecionar texto para buscar)
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-f>",
+  ":lua project_grep_prompt()<CR>",
+  { noremap = true, silent = true, desc = "Buscar no projeto (Ctrl+F)" }
+)
+vim.api.nvim_set_keymap(
+  "v",
+  "<C-f>",
+  ':<C-u>lua require("telescope.builtin").live_grep({ default_text = vim.fn.getreg("") })<CR>',
+  { noremap = true, silent = true, desc = "Buscar no projeto (Ctrl+F) com seleção visual" }
+)
+
+-- Você também pode querer mapear 'gf' ou outras teclas
+-- vim.api.nvim_set_keymap('n', 'gf', ':lua require("telescope.builtin").grep_string()<CR>', { noremap = true, silent = true, desc = "Buscar palavra sob o cursor" })
+-- Usar: com ctrl+ seta -- e enter para confirmar.
+-- Explicacao: [by Gemini](https://g.co/gemini/share/034e54568bc5)
+

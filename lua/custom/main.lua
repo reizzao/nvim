@@ -11,9 +11,9 @@ vim.cmd([[ set clipboard=unnamedplus ]]) -- compartilhar de área de transferên
 -- ARQUIVO ---------------------------------------------------------------------
 -- Salvar e sair forçado --
 vim.cmd([[
-  nnoremap <A-q> :wq!<CR>
-  inoremap <A-q> <Esc>:wq!<CR>l
-  vnoremap <A-q> <Esc>:wq!<CR>
+  nnoremap <C-q> :wqa!<CR>
+  inoremap <C-q> <Esc>:wqa!<CR>l
+  vnoremap <C-q> <Esc>:wqa!<CR>
 ]])
 
 -- Salvar --
@@ -22,8 +22,8 @@ vim.cmd([[
   inoremap <C-s> <Esc>:w<CR>l
   vnoremap <C-s> <Esc>:w<CR>
 ]])
-
 -- Copiar >> Colar -- Volta em modo insert --
+
 vim.cmd([[
   noremap <C-c> "+y
   inoremap <C-c> "+y<CR>
@@ -52,6 +52,8 @@ vim.cmd([[ map <C-a> ggVG ]])
 vim.cmd([[ map <S-Tab> :bnext<CR> ]])
 -- deletar buffer
 vim.cmd([[ map <A-w> :bdelete<CR> ]])
+
+vim.api.nvim_set_keymap("n", "<A-q>", "<Cmd>q!<CR>", { noremap = true, silent = true, desc = "Fechar aba em foco" })
 
 -- LINHA -----------------------------------------------------------------------
 -- Deletar Linha --
@@ -123,7 +125,7 @@ vim.api.nvim_set_keymap("n", "<A-Down>", "<Cmd>$<CR>", { noremap = true, silent 
 
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>ex",
+  "<A-e>",
   "<Cmd>Ex<CR>",
   { noremap = true, silent = true, desc = "explorer nativo netwr :Ex" }
 )

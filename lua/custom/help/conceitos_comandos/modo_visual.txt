@@ -1,0 +1,31 @@
+# Modo_Visual
+
+Modo Visual :
+acesso: Esc v, ou selecionou qualquer texto já entra em visual, significa: só visualizar.
+
+copiar_selecionado: seleciona y,
+copia_linha: yy,
+colar: p, significa: paste / colar
+deletar: d, significa: delete
+selecionar_varias_linhas: seta pra cima ou pra baixo.
+recortar_jogarPraMemoria: td, dps ao colar pode colar quantas vezes quiser porque foi pra memória.
+
+usar_atalhos_com_numerosLinha: número De Linhas <comandoAtalho> ex: 9 dd vai apagar da linha atual até 9 linhas pra baixo,para esses é bom usar o numerador padrão de linhas do vim.
+
+unir_fim_da/linhaDeBaixoVomADeCima. shif+j
+
+  Movimentacao
+mover_entre_palavras/ou_linhas: shift+SETAS
+ir_fim_da_linha: tecla END ou ^^
+ir_comeco/linha: tecla HOME ou $
+ir_pra_linha: :número Da_Linha ex. :10 vai pra linha 10
+ir_pra_ultima_linha: shift+g , útil pra quem não sabe o número da última linha.
+ir_pra_proxima_ocorrencia: n , significa:next
+ir_comeco_arquivo: gg ou :1
+
+pular_entre_janelas: ctr+w w
+
+executar_comando_De_Terminal:  :!<comandoDeTerminal>, ex: !ls -a ou !go run main.go etc..., explicacao: é forçar o comando de terminal no modo comando di vim , somente ações não interativas que não demoram mostra e tchau fecha.
+obs: se inserir 1 ponto antes da ! ele salva no arquivo que estou usando o resultado do comando execurado: ex: :.!deno task run main.ts (k que retornar ele vai escrever em string no arquivo que estou.)
+
+copiar_arquivo_inteiro: em um novo arquivo :.!cat /endereco/Alvo.extensao ,

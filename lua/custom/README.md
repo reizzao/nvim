@@ -23,5 +23,7 @@
 * Sobre_o_GerenciadorDePlugins_lazyvim
   - Explorer: vem com o nvim-tree , mas preferi usar o neo-tree
   - Já vem funcionando [ fechamento de chaves auto pairs, telescope,  ]
+  - O Tema default que vem no Lazyvim é o Tokyo 
+  - Após configurar um novo plugin,ao reabrir o editor >> caso nao auto-instalar , execute >> :Lazy sync
 
 ---

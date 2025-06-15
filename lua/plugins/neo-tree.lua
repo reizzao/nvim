@@ -39,4 +39,3 @@ return {
     end, { desc = "Toggle Neo-tree" })
   end,
 }
-

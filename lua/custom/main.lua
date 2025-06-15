@@ -1,11 +1,10 @@
+vim.g.guicursor = "" -- depois $`reset` no terminal para assumir o cursor fininho : < IBeam > configurado no terminal.
+vim.g.mapleader = " " -- Define a tecla 'leader' (geralmente configurado em um local anterior, como init.lua do LazyVim)
 
-vim.g.guicursor = ""          -- depois $`reset` no terminal para assumir o cursor fininho : < IBeam > configurado no terminal.
-vim.g.mapleader = " "         -- Define a tecla 'leader' (geralmente configurado em um local anterior, como init.lua do LazyVim)
-
--- ajudas : { "n", "v", "x", "i" } - objeto todos modos - 
+-- ajudas : { "n", "v", "x", "i" } - objeto todos modos -
 -- set_keymap("n", "<A-q>", "<cmd>wq!<CR>", "Salvar e sair")
 
-vim.cmd([[ set clipboard=unnamedplus ]])   -- compartilhar de área de transferência entre o Vim e o Linux
+vim.cmd([[ set clipboard=unnamedplus ]]) -- compartilhar de área de transferência entre o Vim e o Linux
 
 -- ARQUIVO ---------------------------------------------------------------------
 -- Salvar e sair forçado --
@@ -72,8 +71,8 @@ vim.cmd([[
   vnoremap . >gv
  ]])
 
- -- TABS --
- vim.cmd([[
+-- TABS --
+vim.cmd([[
    noremap <Tab> :tabnext<CR>
    ]])
 
@@ -84,7 +83,6 @@ vim.cmd([[
   inoremap <A-m> <ESC>viwUi " pra maiuscula em insert
   nnoremap <A-m> viwU<Esc> " pra minuscula em normal
 ]])
-
 
 -- SUBSTITUIÇÃO TODAS OCORRENCIAS DIGITADAS
 -- para usar execute o atalho -> volte uma barra com a seta e digite A PROCURA -> após a proxima barra digite o que  vai substituir a procura encontrada
@@ -117,3 +115,15 @@ vim.cmd([[
   nnoremap <C-left>  <Esc>:vertical resize -2<CR>
   nnoremap <C-right> <Esc>:vertical resize +2<CR>
 ]])
+
+vim.api.nvim_set_keymap("n", "<A-Up>", "<Cmd>0<CR>", { noremap = true, silent = true, desc = "Início do Arquivo" })
+vim.api.nvim_set_keymap("n", "<A-Down>", "<Cmd>$<CR>", { noremap = true, silent = true, desc = "Fim do Arquivo" })
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ex",
+  "<Cmd>Ex<CR>",
+  { noremap = true, silent = true, desc = "explorer nativo netwr :Ex" }
+)
+
+---

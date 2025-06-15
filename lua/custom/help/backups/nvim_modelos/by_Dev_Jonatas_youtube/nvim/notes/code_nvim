@@ -1,0 +1,8 @@
+-- Configurar opcoes de comando cmd
+    -- via_api_vim_2025 :: opt.history = valor
+    -- que_nao_esta_na_api_vim:: vim.cmd([[  ]])   -- Outra forma antiga de fazer a config.
+
+-- Lsp
+significa: servidor de linguagens,
+beneficios: da auto complete , linter, erros, da opções para sintaxe da linguagem em uso
+nativo_do_neovim: é o lsp-config , doc: (https://github.com/neovim/nvim-lspconfig)

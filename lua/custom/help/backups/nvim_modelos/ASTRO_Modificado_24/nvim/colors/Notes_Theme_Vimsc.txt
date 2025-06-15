@@ -1,0 +1,25 @@
+
+Variaveis:
+varThemeVim: "": variar: "", desc: "",
+varThemeVim: "Keyword": variar: "PinkClean", desc: "Nome da Keys, chaves, titulos",
+varThemeVim: "Function": variar: "greenClean", desc: "Nome das funcoes e classes",
+
+
+VariaveisCores:
+titulo: "", hex: "", ref: "",
+
+// Pink
+titulo: "PinkClean", hex: "#ff79c6", ref: "Pink DraculaOficial",
+
+// Green
+titulo: "greenClean", hex: "#50fa7b", ref: "verde funcao DraculaOficial",
+titulo: "greenMedio", hex: "#00b300", ref: "",
+
+======
+
+Links:
+Paleta de cores cor Dracula oficial: https://draculatheme.com/contribute
+
+=====
+// Ainda nao sei as Variaveis
+[ Type, Boolean,Character,  ]

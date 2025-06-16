@@ -1,13 +1,13 @@
--- como esta é apenas uma especificação de exemplo, não carregue nada aqui e retorne uma especificação vazia
+-- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 if true then return {} end
 
--- Todos os arquivos de especificação no diretório "plugins" serão carregados automaticamente pelo lazy.nvim
+-- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
--- Nos seus arquivos de plugins, você pode:
--- * adicionar plugins extras
--- * desabilitar/habilitar plugins do LazyVim
--- * substituir a configuração dos plugins do LazyVim
+-- In your plugin files, you can:
+-- * add extra plugins
+-- * disable/enabled LazyVim plugins
+-- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },

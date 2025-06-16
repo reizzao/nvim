@@ -1,0 +1,8 @@
+-- Para mapear teclas para mudar de modo no settings.json do vscode
+
+  "vim.insertModeKeyBindings": [
+    { // -- atalho < m 2vz > para mudar modos - obs: mesmo assim funciona o Esc --
+      "before": [ "m", "m"],
+      "after": ["<Esc>"]
+    }
+  ],

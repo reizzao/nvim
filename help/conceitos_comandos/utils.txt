@@ -1,0 +1,4 @@
+# Utils
+
+- se for fazer comando Maiusculo é só usar shif+Letra, não precisa primeiro deixa-la maiuscula use o shift no lugsr do Capslock.
+

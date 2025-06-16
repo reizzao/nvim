@@ -1,0 +1,26 @@
+# Modo_Comando
+
+Modo Comando : acesso: 2 pontos
+
+pesquisar_texto: barra e o textoAlvo
+
+substituir_todas_ocorrencias_de_texto: :s/texto/substituicaoNova , significa: s é de substituição e,
+obs: se quiser só na mesma linha insira no final do comando  /g ,
+
+substituir_entre_linhas: :1,5 s/alvo/substituição,  obs: linha que começa virgula linha que termina <acao>, semelhante no vscode selecionar com será as linhas e modificar ocorrência. obs: é sempre do cursor pra baixo.
+
+
+apaga_linha_do_cursorPraBaixo: ctr+u
+
+Arquivos: 
+
+criar_novo_arquivo: 
+	com_vim_fechado :vim nomearquivo.extensao
+	aberto: :e arquivo.ext
+
+salvar: 
+ salvar_e_sair: :x
+ salvar_sem_sair: :w
+ salvar_com_novo_nome: :w arquivonovo.ext
+
+---

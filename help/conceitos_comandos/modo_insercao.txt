@@ -1,0 +1,14 @@
+# Modo_Insercao
+
+Atalhos :
+
+desfazer : u, significa: undo
+refazer: ctr+r ,significa: redo
+tab_na_linha : ctr+t da o tab, desfazer: ctr+d
+repete_linha_de_cima: ctr+y
+repete_linha_de_baixo: ctr+e
+sair_sem_salvar: q, significa quit
+sair_sem_salvar_forcando: q!, significa: o ! é forçar
+salvar_e_continuar: w, significa: write / escrever
+salvar_e_sair: wq!, significa: write quit firme, salvar sair forçado.
+salvar_com_outro_nome: w ./localidade/nomearquivoNovo.extensao

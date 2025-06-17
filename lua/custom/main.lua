@@ -40,26 +40,25 @@ vim.keymap.set("n", "C-s", ":w<CR>", { desc = "Salvar arquivo." })
 -- =============================================
 -- SAIR
 -- =============================================
-vim.keymap.set("n", "<leader>qa", ":qa!<CR>", { desc = "Matar SAIR SEM SALVAR do editor neovim" }) -- TODO: ATALHO
-vim.keymap.set("n", "<leader>wq", ":wq!<CR>", { desc = "Sair Salvando do Editor Neovim" })
+
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>qb",
+  "<A-k>",
   "<Cmd>wq!<CR>",
-  { noremap = true, silent = true, desc = "Fechar aba buffer em foco salvando" }
-) -- TODO Não precisa faz o mesmo de fechar o editor salvando.
+  { noremap = true, silent = true, desc = "Fechar Mata o Editor Salvando" }
+) -- NOTE faz o mesmo de fechar o editor salvando.
+
+vim.keymap.set("n", "<A-q>", function()
+  buffers_utils.close_all_buffers(false) -- `false` para não forçar em buffers modificados
+end, { desc = "Fechar todos os buffers e abrir novo vazio" })
+
+-- ================================================
 
 -- BUFFERS --
 -- proximo buffer
 vim.cmd([[ map <S-Tab> :bnext<CR> ]])
 -- deletar buffer
 vim.cmd([[ map <A-w> :bdelete<CR> ]])
-
--- ** Fechar TODOS os Buffers e Abrir um Novo Vazio **
--- Mapeamos Alt + q a para a nova função close_all_buffers.
-vim.keymap.set("n", "<A-q>", function()
-  buffers_utils.close_all_buffers(false) -- `false` para não forçar em buffers modificados
-end, { desc = "Fechar todos os buffers e abrir novo vazio" })
 
 -- Opcional: Versão que força o fechamento de todos os buffers (ignora alterações não salvas)
 vim.keymap.set("n", "<M-qA>", function() -- Usando Alt + Shift + q + A para forçar

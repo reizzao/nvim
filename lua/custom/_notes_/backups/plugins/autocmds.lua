@@ -1,0 +1,16 @@
+-- -- Autocomando para abrir o neo-tree em foco ao iniciar o Neovim sem um arquivo
+-- -- Certifique-se de que este código está em um lugar apropriado na sua configuração,
+-- -- como dentro de um `config` function do próprio plugin neo-tree,
+-- -- ou em um módulo de configuração carregado após os plugins.
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   group = vim.api.nvim_create_augroup("NeoTreeOnVimEnter", { clear = true }), -- Cria um grupo para este autocomando
+--   pattern = "*", -- Ativa para qualquer arquivo/buffer
+--   callback = function()
+--     -- Verifica se não há argumentos (ou seja, Neovim foi aberto sem um arquivo)
+--     -- e se a janela do Neo-tree não está visível
+--     if vim.fn.argc() == 0 and not require("neo-tree.sources.manager").is_visible() then
+--       -- Abre o Neo-tree no modo de arquivo (filesystem)
+--       require("neo-tree.command").execute({ toggle = true, dir = vim.fn.getcwd(), source = "filesystem" })
+--     end
+--   end,
+-- })

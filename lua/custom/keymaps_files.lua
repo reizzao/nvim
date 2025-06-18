@@ -12,7 +12,7 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
 end, { desc = "Salvar arquivo" })
 
 -- Sair
-vim.keymap.set("n", "<F12>", "<Cmd>wq!<CR>", { desc = "Salvar e fechar todas as janelas" }) -- Salva e fecha todas as janelas (mata o editor).
+-- vim.keymap.set("n", "<F12>", "<Cmd>wq!<CR>", { desc = "Salvar e fechar todas as janelas" }) -- Salva e fecha todas as janelas (mata o editor).
 vim.keymap.set("n", "<A-ww>", function()
   -- Assume `buffers_utils` é um módulo que você tem. Se não, remova ou crie essa função.
   -- Exemplo simples se não tiver `buffers_utils`: vim.cmd('qa!')

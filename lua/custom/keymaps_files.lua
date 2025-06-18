@@ -1,5 +1,5 @@
 -- keymaps.arquivos.lua
--- GERENCIAMENTO DE ARQUIVOS 
+-- GERENCIAMENTO DE ARQUIVOS
 
 -- Salvar
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
@@ -12,16 +12,18 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
 end, { desc = "Salvar arquivo" })
 
 -- Sair
-vim.keymap.set("n", "<A-k>", "<Cmd>wq!<CR>", { desc = "Salvar e fechar todas as janelas" }) -- Salva e fecha todas as janelas (mata o editor).
-vim.keymap.set("n", "<A-q>", function()
+vim.keymap.set("n", "<F12>", "<Cmd>wq!<CR>", { desc = "Salvar e fechar todas as janelas" }) -- Salva e fecha todas as janelas (mata o editor).
+vim.keymap.set("n", "<A-ww>", function()
   -- Assume `buffers_utils` é um módulo que você tem. Se não, remova ou crie essa função.
   -- Exemplo simples se não tiver `buffers_utils`: vim.cmd('qa!')
   require("buffers_utils").close_all_buffers(false) -- Fecha todos os buffers, perguntando por modificações.
 end, { desc = "Fechar todos os buffers e abrir novo vazio" })
 
-vim.keymap.set("n", "<M-qA>", function()
-  require("buffers_utils").close_all_buffers(true) -- Força o fechamento de todos os buffers (ignora modificações).
-end, { desc = "Fechar todos os buffers (FORÇAR)" })
+-- vim.keymap.set("n", "<F12>", function() -- TODO nao sei se vou usar
+--   require("buffers_utils").close_buffer(true) -- Força o fechamento de todos os buffers (ignora modificações).
+-- end, { desc = ":qa! >> SEM SALVAR Fechar todos os buffers (FORÇAR)" })
+
+vim.keymap.set('n', 'A-w', ':bd<CR>', { desc = "Fechar buffer em foco" })
 
 -- Buffers
 vim.keymap.set("n", "<S-Tab>", ":bnext<CR>", { desc = "Próximo buffer" }) -- Navega para o próximo buffer.

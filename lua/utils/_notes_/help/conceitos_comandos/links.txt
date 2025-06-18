@@ -1,0 +1,13 @@
+# Links
+
+aulas : [
+  - Construcao Nvim do Zero: by jonathanDev : (https://www.youtube.com/watch?v=ll6UKVNxPXo&t=1026s)
+
+  - Vim_Comandos: by: VagnerFonseca: https://youtube.com/@fonsecavagner?si=ZU1BRs1WvNo7aZeR
+
+]
+
+Boas_configs_neovim : [
+  - joaobibiano: https://github.com/joaobibiano/kickstart.nvim
+  - quick start nvim : https://github.com/nvim-lua/kickstart.nvim
+]

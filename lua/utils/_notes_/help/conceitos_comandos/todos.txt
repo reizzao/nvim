@@ -1,0 +1,3 @@
+- integrar github no nvim ou laztvim
+- debug na linha de codigo
+- integrar lsp das linguagens 

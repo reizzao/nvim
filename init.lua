@@ -1,6 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- === PERSONAL INIT LUA =======================================================
 -- : no init.lua :: carregar o utils/loader que carrega todos os modulos em /custom
 -- Requer o módulo loader
 local custom_loader = require('utils.loader')
@@ -13,3 +14,4 @@ custom_loader.load_directory(custom_dir, 'custom')
 
 --
 -- ~/.config/nvim/init.lua ou lua/config/options.lua
+-- === FINAL PERSONAL INIT LUA =================================================

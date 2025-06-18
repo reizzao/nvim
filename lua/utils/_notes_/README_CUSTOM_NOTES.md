@@ -1,6 +1,5 @@
 # 💤 README CUSTOM NOTES
 ---
-# README - CUSTOM NVIM
 
 Instalar:
 

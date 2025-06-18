@@ -17,6 +17,9 @@ Atalhos
 - Sair_Kill_Buffers_FicaEditor_Perguntando: A-bq
 - Sair_Buffer_Perguntando: A-q
 - Sair_Kill_Terminal: A-tq
+- Toogke_Explorer_1_netwr: leader>e
+- Toogke_Explorer_2_nvim-tree: A-e
+- Toogke_Explorer_3_tekescope: <leader><leader>
 
 
 

@@ -1,0 +1,25 @@
+-- ~/.config/nvim/lua/plugins/treesitter.lua
+
+return {
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate', -- Isso será executado novamente na primeira inicialização
+  opts = {
+    ensure_installed = {
+      'lua',
+      'javascript',
+      'typescript',    -- ESTA LINHA É CRÍTICA
+      'tsx',           -- E ESTA, SE USAR TSX
+      'json',
+      'yaml',
+      'markdown',
+      'markdown_inline',
+    },
+    highlight = { enable = true }, -- ESTA LINHA TAMBÉM É CRÍTICA
+    indent = { enable = true },
+    folding = { enable = true },
+  },
+  config = function(_, opts)
+    require('nvim-treesitter.configs').setup(opts)
+    -- ... (seus autocomandos e defer_fns)
+  end,
+}

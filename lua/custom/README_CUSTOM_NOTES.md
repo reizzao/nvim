@@ -7,13 +7,13 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ---
+Atalhos_Principais_Preferencias
+- Melhor_Tecla_Leader: [ 1 space, 2 alt, ]
+- ToogleTerminal: <F12>
 
-Todo:
-
-# Plugins
-> Baixar os Plugins:
-  * Para_Multi_Cursor: `nvim-next`
-      * Nota: // O Neovim não tem multi-cursor nativo como VSCode. -- Isso é uma simulação via mapeamentos de movimento. -- Para multi-cursor verdadeiro, use plugins como 'nvim-next'.
+- Pra_Sair : Matar_Editor_Perguntando: atalho: <A- > 
+ - Matar_Pra_Pesquisar: atalho: <A-w> Para fechar matar o editor , Perguntando se quer salvar mofificacoes e deixando o só o telescope na pasta atual em foco
+ - Fechar_Buffer_Foco: atalho: <A-q> Para fechar buffer em foco , Perguntando se quer salvar mofificacoes
 
 ---
 
@@ -60,4 +60,12 @@ Tutoriais :
       - Chamar_Custom: add ao init.lua da raiz a chamada para o custom `require("custom.main")` 
   ]
 
+---
+TODO:
 
+# Plugins
+> Baixar os Plugins:
+  * Para_Multi_Cursor: `nvim-next`
+      * Nota: // O Neovim não tem multi-cursor nativo como VSCode. -- Isso é uma simulação via mapeamentos de movimento. -- Para multi-cursor verdadeiro, use plugins como 'nvim-next'.
+
+---

@@ -61,6 +61,17 @@ Tutoriais :
   ]
 
 ---
+Help_Tutoriais
+- [Entendendo as Opções da Tela de Recuperação de Arquivo ](https://g.co/gemini/share/607353bc8569)
+- [Entendendo as Mensagens de Erro no Neovim ](https://g.co/gemini/share/6c86febea79f)
+- [Instalar os LSP server linguagem ](https://g.co/gemini/share/8cd92a368f2a)
+  - Usar: no comando digite:  :Mason >> Iescolha >> `LSPs ` >> A lista mostrará o nome do servidor, sua versão, e um status (por exemplo, installed, not installed). Escolah com as setas
+    - Pressione `i` sobre um item para instalar um servidor.
+    - Pressione `x` sobre um item instalado para desinstalá-lo.
+    - Pressione `?` para ver a ajuda na interface do Mason.
+
+
+---
 TODO:
 
 # Plugins

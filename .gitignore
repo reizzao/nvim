@@ -1,0 +1,11 @@
+tt.*
+.tests
+debug
+.repro
+foo.*
+*.log
+data
+
+# modificado do original:
+# doc/tags
+

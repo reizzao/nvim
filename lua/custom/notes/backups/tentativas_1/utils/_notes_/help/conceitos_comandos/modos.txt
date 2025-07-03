@@ -1,0 +1,12 @@
+# Modos
+
+## Conceito Modos
+
+O Editor Possui 4 modos: [
+Comandos: vc sempre volta pra esse ao dar Esc, acesso: Esc,
+
+Inserção : vc escreve coisas novas , acesso: i,
+
+Substituição: replace vc escreve por cima , acesso: 2x tecla INSERT,
+
+Visual: , acesso: Esc v, ou ao selecionar

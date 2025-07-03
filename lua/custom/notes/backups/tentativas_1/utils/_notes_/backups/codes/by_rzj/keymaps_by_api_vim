@@ -1,0 +1,42 @@
+-- Os mapas de teclas são carregados automaticamente no evento VeryLazy
+-- Mapas de teclas padrão que são sempre definidos: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Adicione quaisquer mapas de teclas adicionais aqui
+
+-- Opções de Mapeamento Comuns
+local map_opts = { silent = true, noremap = true, override = true }
+
+-- Mapeamento para Salvar (Ctrl + S)
+-- Este mapeamento faz sentido APENAS no Modo Normal.
+vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Salvar arquivo", silent = true, override = true })
+
+-- Mapeamento para Navegação com Shift + Seta para Esquerda (b - palavra anterior)
+-- Este mapeamento faz sentido em Modo Normal e Modo Visual, pois 'b' funciona em ambos.
+vim.keymap.set({"n", "v", "x"}, "<S-Left>", "b", map_opts)
+
+-- Mapeamento para Navegação com Shift + Seta para Direita (e - fim da palavra)
+-- Também faz sentido em Modo Normal e Modo Visual.
+vim.keymap.set({"n", "v", "x"}, "<S-Right>", "e", map_opts)
+
+-- Mapeamento para Navegação com Shift + Seta para Cima (parágrafo anterior)
+vim.keymap.set({"n", "v", "x"}, "<S-Up>", "{", map_opts)
+
+-- Mapeamento para Navegação com Shift + Seta para Baixo (próximo parágrafo)
+vim.keymap.set({"n", "v", "x"}, "<S-Down>", "}", map_opts)
+
+-- Mapeamento para Navegação com Shift + Home (início da linha)
+vim.keymap.set({"n", "v", "x"}, "<S-Home>", "0", map_opts)
+
+-- Mapeamento para Navegação com Shift + End (fim da linha)
+vim.keymap.set({"n", "v", "x"}, "<S-End>", "$", map_opts)
+
+-- === Mapeamentos para Modo de Inserção (i) - CUIDADO: Diferente! ===
+-- Os mapeamentos no modo de inserção geralmente precisam de <C-o>
+-- ou uma lógica diferente, então geralmente não podem ser agrupados
+-- com os modos normal/visual para a mesma RHS (right-hand side).
+
+vim.keymap.set("i", "<S-Left>", "<C-o>b", map_opts)
+vim.keymap.set("i", "<S-Right>", "<C-o>e", map_opts)
+vim.keymap.set("i", "<S-Up>", "<C-o>{", map_opts)
+vim.keymap.set("i", "<S-Down>", "<C-o>}", map_opts)
+vim.keymap.set("i", "<S-Home>", "<C-o>0", map_opts)
+vim.keymap.set("i", "<S-End>", "<C-o>$", map_opts)

@@ -1,4 +1,4 @@
--- lua/plugins/init.lua
+-- lua/custom/plugins/init.lua
 
 -- Aqui você configuraria seu gerenciador de plugins, ex: lazy.nvim
 -- Por enquanto, este arquivo pode estar vazio ou conter anotações sobre

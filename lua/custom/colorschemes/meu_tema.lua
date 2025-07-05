@@ -1,4 +1,4 @@
--- lua/colorschemes/meu_tema.lua
+-- lua/custom/colorschemes/meu_tema.lua
 
 -- Recomendado: Limpar quaisquer destaques existentes antes de aplicar os seus
 -- Isso é útil para garantir que seu tema seja aplicado de forma limpa.

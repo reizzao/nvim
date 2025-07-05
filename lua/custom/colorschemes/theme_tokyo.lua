@@ -1,4 +1,4 @@
--- lua/colorschemes/theme_tokyo.lua
+-- lua/custom/colorschemes/theme_tokyo.lua
 
 -- Limpa quaisquer destaques existentes antes de aplicar os seus
 vim.cmd("highlight clear")

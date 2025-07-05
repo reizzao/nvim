@@ -1,4 +1,4 @@
--- lua/keymaps/general.lua
+-- lua/custom/keymaps/general.lua
 
 -- Mapeamento para salvar (Ctrl+S)
 vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Salvar arquivo' })

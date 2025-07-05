@@ -1,7 +1,7 @@
 -- init.lua
 
 -- Carrega a função de carregamento que criamos
-local loader = require('utils.loader')
+local loader = require('custom.utils.loader')
 
 -- --- Configurações Core ---
 -- Certifique-se de que 'termguicolors' esteja true aqui para que as cores funcionem
@@ -17,13 +17,13 @@ vim.cmd("colorscheme catppuccin")  " [ON]]
 -- vim.cmd("colorscheme catppuccin")
 
 -- --- Mapeamentos de Tecla ---
-loader.load_directory('keymaps')
+loader.load_directory('custom.keymaps')
 
 -- --- Plugins ---
-loader.load_directory('plugins')
+loader.load_directory('custom.plugins')
 
 -- --- Configuração LSP (Language Server Protocol) ---
-loader.load_directory('lsp')
+loader.load_directory('custom.lsp')
 
 -- --- Configurações de Tipo de Arquivo (Filetype Plugins) ---
-loader.load_directory('ftplugin')
+loader.load_directory('custom.ftplugins')

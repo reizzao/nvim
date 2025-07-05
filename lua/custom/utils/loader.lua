@@ -1,4 +1,4 @@
--- lua/utils/loader.lua
+-- lua/custom/utils/loader.lua
 local M = {} -- Tabela para o módulo (boas práticas em Lua)
 
 --- Carrega todos os módulos Lua de um diretório especificado.

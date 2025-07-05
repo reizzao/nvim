@@ -1,4 +1,4 @@
--- lua/core/options.lua
+-- lua/custom/core/options.lua
 vim.opt.nu = true        -- Número de linha
 vim.opt.relativenumber = true -- Números relativos
 vim.opt.tabstop = 4      -- Tamanho do tab

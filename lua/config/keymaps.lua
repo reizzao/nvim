@@ -1,3 +1,0 @@
--- Os mapas de teclas são carregados automaticamente no evento VeryLazy
--- Mapas de teclas padrão que são sempre definidos: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Adicione quaisquer mapas de teclas adicionais aqui

@@ -1,14 +1,29 @@
--- ~/.config/nvim/lua/custom/init.lua
+-- init.lua
 
-return {
-  -- Carrega todos os plugins definidos em lua/custom/languages.lua
-  require("custom.languages"),
-  -- Carrega as configurações de LSP definidas em lua/custom/lsp.lua
-  require("custom.lsp"),
+-- Carrega a função de carregamento que criamos
+local loader = require('utils.loader')
 
-  -- NOVO: Carrega seus arquivos de mapeamento de teclas
-  require("custom.keymaps_files"),
-  require("custom.keymaps_move"),
-  require("custom.keymaps_text"),
-  require("custom.keymaps"), -- Se este for um arquivo geral de keymaps, mantenha-o.
-}
+-- --- Configurações Core ---
+-- Certifique-se de que 'termguicolors' esteja true aqui para que as cores funcionem
+loader.load_directory('core')
+
+-- --- Def Tema Padrao (Colorscheme) ---
+-- Para um tema do GitHub (ex: catppuccin): -- Certifique-se de ter o plugin instalado primeiro! -Obs: este nao precisa de estar compativel na pasta colors/
+vim.cmd("colorscheme catppuccin")  " [ON]]
+-- vim.cmd("colorscheme theme_tokyo") " [OFF : TODO]]
+-- vim.cmd("colorscheme meu_tema") " [OFF : TODO]]
+
+
+-- vim.cmd("colorscheme catppuccin")
+
+-- --- Mapeamentos de Tecla ---
+loader.load_directory('keymaps')
+
+-- --- Plugins ---
+loader.load_directory('plugins')
+
+-- --- Configuração LSP (Language Server Protocol) ---
+loader.load_directory('lsp')
+
+-- --- Configurações de Tipo de Arquivo (Filetype Plugins) ---
+loader.load_directory('ftplugin')
